@@ -64,15 +64,23 @@ sudo reboot
 ### Install new python version with pyenv, activate is as global, update pip and setup tools
 `pyenv install 3.8.3`
 `pyenv global 3.8.3`
-`
+`pip install --upgrade pip setuptools`
 
 ### venv-here script
 add to `~/.zshrc`:
 
 ```
 function venv-here {
-  # you could just use 'layout python' here for 2.7.x
-  echo "layout pyenv 3.8.3" > .envrc
-  echo "ln -s .direnv/\$(basename \$VIRTUAL_ENV)/ .env" >> .envrc
+    # you could just use 'layout python' here for 2.7.x
+    echo "layout pyenv 3.8.3" > .envrc
+    echo "ln -s .direnv/\$(basename \$VIRTUAL_ENV)/ .env" >> .envrc
+    direnv allow
+    pipup
 }
+
+function pipup {
+    pip install --upgrade pip setuptools
+}
+
 ```
+
