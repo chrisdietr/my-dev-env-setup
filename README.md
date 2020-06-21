@@ -47,8 +47,32 @@ echo '' >> ~/.zshrc
 echo 'eval "$(direnv hook bash)"' >> ~/.zshrc
 ```
 
+### create global .gitignore and add .direnv/ + .envrc
+
+touch ~/.gitignore_global
+echo '.direnv/' >> ~/.gitignore_global
+echo '.envrc' >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
+
 ### Reboot
 ```
 echo "Reboot server"
 sudo reboot
+```
+
+### Install new python version with pyenv, activate is as global, update pip and setup tools
+`pyenv install 3.8.3`
+`pyenv global 3.8.3`
+`
+
+### venv-here script
+add to `~/.zshrc`:
+
+```
+function venv-here {
+  # you could just use 'layout python' here for 2.7.x
+  echo "layout pyenv 3.8.3" > .envrc
+  echo "ln -s .direnv/\$(basename \$VIRTUAL_ENV)/ .env" >> .envrc
+}
 ```
