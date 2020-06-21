@@ -1,7 +1,7 @@
 # my-dev-env-setup
 Setup of python environment.
 
-## Ubuntu 20.04 LTS + zsh + ohmyzsh + pyenv + direnv
+## Ubuntu 20.04 LTS + zsh + ohmyzsh + pyenv + direnv - manual installation
 
 ### Ubuntu
 ```
@@ -90,4 +90,10 @@ function pipup {
 - run `venv-here` to create and activate venv
 - run `pipup` to update pip
 
+
+## Ubuntu 20.04 LTS + zsh + ohmyzsh + pyenv + direnv - setup with Ansible
+
+Requirements:
+- ssh access via local key established on remote server
+- Ansible working on remote machine - requires python installed?
 
