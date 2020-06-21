@@ -75,7 +75,6 @@ function venv-here {
     echo "layout pyenv 3.8.3" > .envrc
     echo "ln -s .direnv/\$(basename \$VIRTUAL_ENV)/ .env" >> .envrc
     direnv allow
-    pipup
 }
 
 function pipup {
@@ -83,4 +82,12 @@ function pipup {
 }
 
 ```
+
+## Workflow
+- Run all the scripts
+- Now create a new folder with `mkdir newdir`
+- Go into the new directory `cd newdir`
+- run `venv-here` to create and activate venv
+- run `pipup` to update pip
+
 
