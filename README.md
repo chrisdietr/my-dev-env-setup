@@ -97,3 +97,13 @@ Requirements:
 - ssh access via local key established on remote server
 - Ansible working on remote machine - requires python installed?
 
+
+## Ubuntu 20.04 LTS + zsh + ohmyzsh + pyenv + direnv - with ansible + docker
+
+Note: next level, once ansible is installed. Purpose: keep local + remote environment in sync.
+
+- Ansible for provisioning and configuring enviroment. 
+- Docker for deploying applications.
+
+## Ubuntu 20.04 LTS + zsh + ohmyzsh + pyenv + direnv - with ansible + docker
+Big picture: deploy applications serverless on AWS Lambda or Fargate.
